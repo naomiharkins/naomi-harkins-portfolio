@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Python and SQL data-quality case study using Sloan Digital Sky Survey data."><title>SDSS Data Quality | Naomi Harkins</title><link rel="stylesheet" href="../../styles.css"></head>
+<body><a class="skip-link" href="#main-content">Skip to main content</a><header class="site-header compact-header">
+  <div class="wrapper header-row">
+    <a class="brand" href="../../index.html">Naomi Harkins</a>
+    <nav aria-label="Primary navigation">
+      <a href="../../index.html">Home</a>
+      <a href="../../index.html#projects">Projects</a>
+      <a href="../../index.html#skills">Skills</a>
+      <a href="../../resume/index.html">Resume</a>
+    </nav>
+  </div>
+</header>
+<main id="main-content" class="wrapper project-page" tabindex="-1">
+<p class="eyebrow">Python · SQL · scientific data quality</p>
+<h1>SDSS Data Quality and Survey Completeness</h1>
+<p class="lede">A reproducible analysis of survey coverage, missing spectra, filtering logic, and large-scale galaxy data.</p>
+<div class="metric-grid"><div><strong>164,072</strong><span>galaxy records</span></div><div><strong>85.918%</strong><span>with spectra</span></div><div><strong>62,879</strong><span>3D-mapped sample</span></div><div><strong>1,306</strong><span>filtered nearby objects</span></div></div>
+<img class="project-hero" src="../../assets/sdss-data-quality.png" alt="Bar showing 140,967 galaxy records with spectra and 23,105 without spectra out of 164,072 total.">
+<section><h2>What I did</h2><p>I wrote SQL filters for clean galaxy samples, corrected observed magnitudes for extinction, used Python masks to separate records with and without spectra, and kept the sample counts visible at each step. A second analysis transformed sky coordinates and redshift into Cartesian coordinates for spatial visualization.</p></section>
+<section><h2>Quality mindset</h2><p>Some later plots produced patterns that did not match the expected physical interpretation. Those outputs were flagged for calculation review rather than presented as settled findings. The public portfolio includes the verified portions of the work and leaves out unfinished Monte Carlo cells.</p></section>
+<section><h2>Project files</h2><ul class="file-links"><li><a href="spectroscopic-completeness-query.sql">Open the completeness SQL query</a></li><li><a href="large-scale-structure-query.sql">Open the large-scale-structure SQL query</a></li><li><a href="completeness_analysis.py">Open the Python summary script</a></li><li><a href="sample-summary.csv">Open the sample summary</a></li></ul></section>
+<p class="back-link"><a href="../../index.html#projects">Back to all projects</a></p>
+</main><footer class="site-footer"><div class="wrapper">Naomi Harkins · Quality assurance, research, and data portfolio · Updated July 2026</div></footer></body></html>

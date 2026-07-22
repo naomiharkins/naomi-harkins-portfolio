@@ -1,0 +1,7 @@
+NAOMI HARKINS PORTFOLIO — START HERE
+
+1. Extract the entire ZIP file.
+2. Keep every folder in place.
+3. Open index.html to preview the portfolio locally.
+4. For GitHub, upload the CONTENTS of this folder—not the ZIP file—and keep index.html at the repository root.
+5. Read PUBLISH_TO_GITHUB.md for the full publishing and sharing instructions.

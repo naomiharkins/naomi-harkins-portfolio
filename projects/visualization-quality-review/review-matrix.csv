@@ -1,0 +1,7 @@
+Figure,Chart Type,Primary Quality Concern,Recommended Change
+1,"Scatter plot with two line plots","Dense overplotting and weak visual differentiation","Reduce point size or opacity, simplify palette, and improve axis spacing"
+2,"Spatial map with encoded markers","Marker colors blend into the image and axis range adds unused space","Use higher-contrast marker outlines and tighten the displayed range"
+3,"Overlaid histogram with 11 datasets","Heavy color overlap makes individual distributions difficult to distinguish","Use small multiples or a less overlapping comparison and simplify the legend"
+4,"Scatter plot with contour layer","Large symbols obscure the contour information","Reduce marker size and add transparency to establish visual hierarchy"
+5,"Scatter plot with trend line and color scale","Group and trend-line meaning are not fully clear","Label the line directly and strengthen group encoding"
+6,"Scatter plot with line plus histogram","Crowded encodings and unclear axis labeling","Clarify labels, separate competing views, and use a more coherent palette"

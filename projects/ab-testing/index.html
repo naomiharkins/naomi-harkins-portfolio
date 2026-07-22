@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="A/B testing decision analysis using two completed experiments."><title>A/B Testing Decisions | Naomi Harkins</title><link rel="stylesheet" href="../../styles.css"></head>
+<body><a class="skip-link" href="#main-content">Skip to main content</a><header class="site-header compact-header">
+  <div class="wrapper header-row">
+    <a class="brand" href="../../index.html">Naomi Harkins</a>
+    <nav aria-label="Primary navigation">
+      <a href="../../index.html">Home</a>
+      <a href="../../index.html#projects">Projects</a>
+      <a href="../../index.html#skills">Skills</a>
+      <a href="../../resume/index.html">Resume</a>
+    </nav>
+  </div>
+</header>
+<main id="main-content" class="wrapper project-page" tabindex="-1">
+<p class="eyebrow">Statistics · Excel · decision quality</p>
+<h1>A/B Testing Decision Analysis</h1>
+<p class="lede">Two experiments that show why a higher test result is not automatically enough evidence to recommend a rollout.</p>
+<div class="metric-grid"><div><strong>17.55%</strong><span>H&amp;M control open rate</span></div><div><strong>19.13%</strong><span>H&amp;M test open rate</span></div><div><strong>0.047</strong><span>H&amp;M two-sided p-value</span></div><div><strong>0.149</strong><span>Warby Parker p-value</span></div></div>
+<img class="project-hero" src="../../assets/ab-testing.png" alt="Comparison of the H and M email test and Warby Parker landing-page experiment, with significance decisions.">
+<section><h2>H&amp;M email subject line</h2><p>The test subject line increased open rate by about 1.58 percentage points. The two-sided p-value was approximately 0.047, so the result met a 5% statistical-significance threshold, although the test still fell short of the original 20% business target.</p></section>
+<section><h2>Warby Parker landing page</h2><p>The test group had a slightly higher mean rating, but the Welch t-test p-value was approximately 0.149. The observed difference was not statistically significant, so it should not be described as proof that the new page improved satisfaction.</p></section>
+<section><h2>Quality lesson</h2><p>The analysis separates direction, statistical evidence, and business success criteria. It also documents the risk of false positives and false negatives and recommends tracking conversion, revenue, and engagement rather than optimizing a single metric in isolation.</p></section>
+<section><h2>Project files</h2><ul class="file-links"><li><a href="analysis.py">Open the reproducible analysis script</a></li><li><a href="experiment-summary.csv">Open the experiment comparison</a></li></ul></section>
+<p class="back-link"><a href="../../index.html#projects">Back to all projects</a></p>
+</main><footer class="site-footer"><div class="wrapper">Naomi Harkins · Quality assurance, research, and data portfolio · Updated July 2026</div></footer></body></html>

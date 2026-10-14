@@ -1,130 +1,193 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Quality assurance, data validation, scientific research, and analytics portfolio for Naomi Harkins.">
-  <title>Naomi Harkins | Quality Assurance and Data Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-<a class="skip-link" href="#main-content">Skip to main content</a>
-<header class="site-header">
-  <div class="wrapper header-row">
-    <a class="brand" href="index.html">Naomi Harkins</a>
-    <nav aria-label="Primary navigation">
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="resume/index.html">Resume</a>
-    </nav>
-  </div>
-  <div class="wrapper hero">
-    <div class="hero-grid">
-      <div>
-        <p class="eyebrow">Quality assurance · data validation · user-centered review</p>
-        <h1>I look for the details that decide whether a result, report, or digital experience can be trusted.</h1>
-        <p class="lede">I am a recent Astronomy/Astrophysics graduate with experience checking data, investigating unexpected results, auditing public-facing information, and explaining what needs to happen next. I am working toward a career in quality engineering and accessibility.</p>
-        <div class="hero-actions">
-          <a class="button primary" href="#projects">Review selected projects</a>
-          <a class="button secondary" href="resume/index.html">View resume</a>
-          <a class="button secondary" href="mailto:naomiharkins575@gmail.com">Email Naomi</a>
-        </div>
-      </div>
-      <aside class="hero-panel" aria-label="Portfolio highlights">
-        <h2>Portfolio highlights</h2>
-        <ul>
-          <li>25 quality gaps documented across 7 public profiles</li>
-          <li>6 scientific figures reviewed for usability and legibility</li>
-          <li>164,072 galaxy records analyzed for survey completeness</li>
-          <li>2 A/B tests compared using statistical evidence</li>
-          <li>13 energy regions evaluated in an interactive Tableau project</li>
-        </ul>
-      </aside>
-    </div>
-  </div>
+<title>Naomi Harkins Data Portfolio</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one narrow reading column, project case studies as problem / method / result rows, spectrum-line motif as the only ornament */
+:root{
+  --bg:#f5f7fa; --surface:#ffffff; --fg:#13233a; --muted:#52607a; --line:#d8dfe9;
+  --accent:#0b6e8a; --accent-ink:#ffffff; --mark:#e4f1f5;
+  --f-display:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
+  --f-body:"Source Sans 3","Segoe UI",system-ui,sans-serif;
+  --f-mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0c1522; --surface:#142235; --fg:#e7edf6; --muted:#a2b0c6; --line:#27384f;
+  --accent:#5cc4de; --accent-ink:#06202a; --mark:#12303c; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0c1522; --surface:#142235; --fg:#e7edf6; --muted:#a2b0c6; --line:#27384f;
+  --accent:#5cc4de; --accent-ink:#06202a; --mark:#12303c; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font:400 17px/1.6 var(--f-body);
+  padding-inline:max(16px,env(safe-area-inset-left,0px)) max(16px,env(safe-area-inset-right,0px));padding-block:0 64px}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:860px;margin:0 auto}
+nav{display:flex;flex-wrap:wrap;gap:8px 24px;align-items:center;justify-content:space-between;padding-block:20px;font-size:15px}
+nav b{font-family:var(--f-display);font-size:18px}
+nav div{display:flex;gap:20px;flex-wrap:wrap}
+nav a{color:var(--fg);text-decoration:none}
+nav a:hover{color:var(--accent)}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;line-height:1.15;margin:0}
+.eyebrow{font:500 12px/1 var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin:0 0 14px}
+.hero{padding-block:48px 40px}
+.hero h1{font-size:clamp(34px,6vw,56px);font-weight:700;letter-spacing:-.02em;max-width:18ch}
+.hero p.lead{font-size:20px;color:var(--muted);max-width:60ch;margin:20px 0 0}
+.spectrum{display:block;width:100%;height:44px;margin-top:32px}
+.spectrum line{stroke:var(--accent)}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-block;padding:11px 20px;border-radius:6px;font-weight:600;text-decoration:none;border:1.5px solid var(--accent);font-size:16px;font-family:var(--f-body);cursor:pointer;background:transparent;color:var(--accent)}
+.btn.primary{background:var(--accent);color:var(--accent-ink)}
+section{padding-block:40px;border-top:1px solid var(--line)}
+section>h2{font-size:28px;margin-bottom:8px}
+section>p.sub{color:var(--muted);margin:0 0 28px;max-width:60ch}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:16px;margin:0;padding:0;list-style:none}
+.stats li{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:16px}
+.stats strong{display:block;font:700 28px/1.1 var(--f-display);font-variant-numeric:tabular-nums}
+.stats span{font-size:14px;color:var(--muted)}
+.case{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:24px;margin-bottom:20px}
+.case header{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 16px;align-items:baseline;margin-bottom:6px}
+.case h3{font-size:22px}
+.tags{font:400 13px var(--f-mono);color:var(--muted)}
+.case dl{display:grid;grid-template-columns:110px 1fr;gap:12px 20px;margin:16px 0 0}
+.case dt{font:500 12px/1.9 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.case dd{margin:0;min-width:0}
+.result{background:var(--mark);border-radius:6px;padding:10px 12px}
+.pair{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.pair .case{margin:0}
+.pair .case p{margin:8px 0 0}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px}
+.skills h3{font-size:16px;font-family:var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--accent);font-weight:500;margin-bottom:10px}
+.skills ul{margin:0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+.skills li{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:3px 12px;font-size:15px}
+.jobs{display:grid;gap:18px}
+.job{display:grid;grid-template-columns:150px 1fr;gap:4px 20px}
+.job time{font:400 13px/1.9 var(--f-mono);color:var(--muted)}
+.job h3{font-size:18px}
+.job p{margin:4px 0 0;color:var(--muted)}
+.certs{margin:0;padding:0;list-style:none;display:grid;gap:8px}
+.certs li{display:flex;flex-wrap:wrap;gap:4px 12px;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:8px}
+.certs span{color:var(--muted);font-size:15px}
+.status{font:500 12px var(--f-mono);background:var(--mark);color:var(--accent);padding:2px 8px;border-radius:4px}
+.contact p{margin:0 0 16px}
+.mail{font-family:var(--f-mono);font-size:17px;user-select:all}
+footer{font-size:14px;color:var(--muted);padding-top:24px;border-top:1px solid var(--line)}
+@media(max-width:560px){.case dl,.job{grid-template-columns:1fr}.case dl{gap:2px}.case dd{margin-bottom:10px}}
+</style>
+
+<div class="wrap">
+<nav aria-label="Main">
+  <b>Naomi Harkins</b>
+  <div><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#contact">Contact</a></div>
+</nav>
+
+<main>
+<header class="hero">
+  <p class="eyebrow">Data Analyst · Lafayette, IN</p>
+  <h1>I turn messy data into decisions people can trust.</h1>
+  <p class="lead">I studied astrophysics, where one bad measurement can sink a result. Now I apply the same habits to business data: clean it, check it against its source, analyze it, and explain what it means in plain language.</p>
+  <svg class="spectrum" viewBox="0 0 800 44" preserveAspectRatio="none" role="img" aria-label="Decorative spectral line pattern">
+    <g stroke-width="1.5"><line x1="40" y1="4" x2="40" y2="40"/><line x1="96" y1="14" x2="96" y2="40"/><line x1="150" y1="4" x2="150" y2="40"/><line x1="231" y1="20" x2="231" y2="40"/><line x1="280" y1="8" x2="280" y2="40"/><line x1="352" y1="4" x2="352" y2="40"/><line x1="371" y1="16" x2="371" y2="40"/><line x1="455" y1="4" x2="455" y2="40"/><line x1="510" y1="12" x2="510" y2="40"/><line x1="598" y1="4" x2="598" y2="40"/><line x1="651" y1="18" x2="651" y2="40"/><line x1="720" y1="6" x2="720" y2="40"/></g>
+  </svg>
+  <div class="cta"><a class="btn primary" href="#projects">See my projects</a><a class="btn" href="https://naomiharkins.github.io/naomi-harkins-portfolio/resume/">View resume</a></div>
 </header>
-<main id="main-content" tabindex="-1">
-<section id="about" class="section">
-  <div class="wrapper">
-    <p class="eyebrow">About</p>
-    <h2>A quality mindset built through research and review</h2>
-    <p class="section-intro">Research taught me not to force a clean story when the evidence is messy. In my projects, I keep sample counts visible, compare expected and actual outputs, trace inconsistencies back to their source, flag limitations, and write recommendations that another person can act on.</p>
+
+<section aria-labelledby="h-num">
+  <h2 id="h-num">By the numbers</h2>
+  <p class="sub">Figures from the projects below.</p>
+  <ul class="stats">
+    <li><strong>2.5M → 1,306</strong><span>records filtered to an analysis-ready set</span></li>
+    <li><strong>548,951</strong><span>energy records cleaned and validated</span></li>
+    <li><strong>164,072</strong><span>galaxy records queried with SQL</span></li>
+    <li><strong>25</strong><span>data quality issues found across 7 platforms</span></li>
+  </ul>
+</section>
+
+<section id="projects" aria-labelledby="h-proj">
+  <h2 id="h-proj">Projects</h2>
+  <p class="sub">Each one follows the same path: a question, how I worked on it, and what I found.</p>
+
+  <article class="case">
+    <header><h3>SDSS Galaxy Data Workflow</h3><span class="tags">SQL · Python · Jupyter</span></header>
+    <dl>
+      <dt>Question</dt><dd>How complete and reliable is a large galaxy survey sample, and which records are good enough to analyze?</dd>
+      <dt>Method</dt><dd>Wrote SQL joins, filters, and aggregations to pull 164,072 records, then cleaned and analyzed them in Python. Built a separate 62,879-record validation workflow and documented every assumption and correction.</dd>
+      <dt>Result</dt><dd class="result">85.9% spectroscopic completeness. Progressive quality filters cut 2,497,140 source records to a 1,306-record dataset ready for analysis.</dd>
+    </dl>
+  </article>
+
+  <article class="case">
+    <header><h3>Data Center Energy Dashboard</h3><span class="tags">Tableau · Excel</span></header>
+    <dl>
+      <dt>Question</dt><dd>Which U.S. region is the best fit for a data center that needs reliable, renewable power?</dd>
+      <dt>Method</dt><dd>Cleaned, reshaped, and validated 548,951 records across 63 authorities and 13 regions. Reconciled totals to the source and tested every calculated field. Built an interactive dashboard with comparison KPIs.</dd>
+      <dt>Result</dt><dd class="result">Recommended the Northwest: 52.3% renewable share, +21.7M annual net balance, and surplus power in 77.6% of hours. Tradeoffs and limits are stated in the dashboard.</dd>
+    </dl>
+  </article>
+
+  <article class="case">
+    <header><h3>A/B Testing Decision Analysis</h3><span class="tags">Excel · Tableau · statistics</span></header>
+    <dl>
+      <dt>Question</dt><dd>Should the business ship each change, or stop?</dd>
+      <dt>Method</dt><dd>Compared two experiments and tested whether each difference was statistically meaningful or just noise.</dd>
+      <dt>Result</dt><dd class="result">One test showed a significant effect and one did not. Each recommendation came with its uncertainty, limitations, and next steps.</dd>
+    </dl>
+  </article>
+
+  <article class="case">
+    <header><h3>Website Performance Analysis: Grammys</h3><span class="tags">Excel · XLOOKUP</span></header>
+    <dl>
+      <dt>Question</dt><dd>How did Grammys and Recording Academy site traffic differ, including on Grammy Awards days?</dd>
+      <dt>Method</dt><dd>Calculated pages per session, bounce rate, and average time on site for each dataset and for the two combined. Used XLOOKUP to bring mobile-visit data into the main table, returning 0 when a date was missing.</dd>
+    </dl>
+  </article>
+
+  <div class="pair">
+    <article class="case"><h3>Business Profile QA Audit</h3><span class="tags">Source verification</span>
+      <p>Checked business information on seven public platforms and documented 25 missing, inaccurate, or broken fields, ranked by user impact.</p></article>
+    <article class="case"><h3>Scientific Chart Readability Review</h3><span class="tags">Visual review</span>
+      <p>Reviewed six astronomy charts for crowded points, low contrast, oversized markers, and unclear labels, with a fix for each.</p></article>
   </div>
 </section>
-<section id="projects" class="section alt">
-  <div class="wrapper">
-    <p class="eyebrow">Selected work</p>
-    <h2>Completed projects that show how I investigate quality</h2>
-    <p class="section-intro">These case studies are based on completed internship, research, and course work. The public versions use cleaned summaries and do not claim direct assistive-technology testing or other experience that has not been completed.</p>
-    <div class="project-grid">
-      <article class="card">
-        <img src="assets/business-profile-qa-audit.png" alt="Completion rates across seven audited public business profiles.">
-        <div class="card-body">
-          <h3>Business Profile QA Audit</h3>
-          <p>A structured consistency review that documented 25 missing, inaccurate, or broken information checks across seven public platforms.</p>
-          <div class="tags" aria-label="Project skills"><span class="tag">QA audit</span><span class="tag">Source verification</span><span class="tag">Prioritization</span></div>
-          <a class="more" href="projects/business-profile-qa-audit/index.html">View the Business Profile QA Audit</a>
-        </div>
-      </article>
-      <article class="card">
-        <img src="assets/visualization-quality-review.svg" alt="Six astronomy charts summarized by the main readability problem found in each one.">
-        <div class="card-body">
-          <h3>Scientific Chart Readability Review</h3>
-          <p>Reviewed six astronomy charts and explained where crowded points, low contrast, oversized markers, or unclear labels made the data harder to understand.</p>
-          <div class="tags" aria-label="Project skills"><span class="tag">Chart review</span><span class="tag">Readability</span><span class="tag">Recommendations</span></div>
-          <a class="more" href="projects/visualization-quality-review/index.html">View the Scientific Chart Readability Review</a>
-        </div>
-      </article>
-      <article class="card">
-        <img src="assets/sdss-data-quality.png" alt="Spectroscopic completeness for the SDSS galaxy sample.">
-        <div class="card-body">
-          <h3>SDSS Data Quality</h3>
-          <p>Python and SQL analysis of 164,072 galaxy records, missing spectra, sample filtering, and reproducible scientific workflows.</p>
-          <div class="tags" aria-label="Project skills"><span class="tag">Python</span><span class="tag">SQL</span><span class="tag">Data validation</span></div>
-          <a class="more" href="projects/sdss-data-quality/index.html">View the SDSS Data Quality case study</a>
-        </div>
-      </article>
-      <article class="card">
-        <img src="assets/ab-testing.png" alt="Comparison of the H and M email test and Warby Parker landing-page experiment.">
-        <div class="card-body">
-          <h3>A/B Testing Decisions</h3>
-          <p>One statistically significant experiment and one non-significant experiment, with recommendations tied to evidence rather than direction alone.</p>
-          <div class="tags" aria-label="Project skills"><span class="tag">Statistics</span><span class="tag">Excel</span><span class="tag">Decision quality</span></div>
-          <a class="more" href="projects/ab-testing/index.html">View the A/B Testing Decisions case study</a>
-        </div>
-      </article>
-      <article class="card">
-        <img src="assets/renewable-energy-dashboard.png" alt="Regional renewable-energy percentage comparison.">
-        <div class="card-body">
-          <h3>Renewable Energy Dashboard</h3>
-          <p>Tableau dashboard logic comparing renewable share, energy mix, and net production to support a regional recommendation.</p>
-          <div class="tags" aria-label="Project skills"><span class="tag">Tableau</span><span class="tag">Dashboard checks</span><span class="tag">Decision support</span></div>
-          <a class="more" href="projects/renewable-energy-dashboard/index.html">View the Renewable Energy Dashboard case study</a>
-        </div>
-      </article>
-    </div>
+
+<section id="skills" aria-labelledby="h-skills">
+  <h2 id="h-skills">Skills</h2>
+  <div class="skills" style="margin-top:20px">
+    <div><h3>Tools</h3><ul><li>SQL</li><li>Excel</li><li>Tableau</li><li>Python</li><li>Jupyter Notebook</li><li>Google Sheets</li><li>Power BI (learning)</li></ul></div>
+    <div><h3>Analysis</h3><ul><li>Data cleaning</li><li>KPI design</li><li>Dashboards</li><li>Segmentation</li><li>Trend and anomaly analysis</li><li>A/B testing</li></ul></div>
+    <div><h3>Data quality</h3><ul><li>Source reconciliation</li><li>Completeness checks</li><li>Documentation</li><li>Reproducible workflows</li></ul></div>
+    <div><h3>Communication</h3><ul><li>Data storytelling</li><li>Stakeholder summaries</li><li>Remote teamwork</li><li>English and Spanish</li></ul></div>
   </div>
 </section>
-<section id="skills" class="section">
-  <div class="wrapper">
-    <p class="eyebrow">Skills</p>
-    <h2>Technical tools and working strengths</h2>
-    <div class="skill-grid">
-      <div class="skill-box"><h3>Quality</h3><p>Consistency audits, expected-versus-actual documentation, data validation, anomaly investigation, source verification, issue prioritization, and reproducible workflows.</p></div>
-      <div class="skill-box"><h3>Technical</h3><p>Python, SQL, UNIX/command line, Jupyter Notebook, Excel, Tableau, SDSS CasJobs, IRAF, A/B testing, hypothesis testing, and dashboard validation.</p></div>
-      <div class="skill-box"><h3>Communication</h3><p>Visual usability review, technical reports, data storytelling, research discussions, cross-functional collaboration, and bilingual English/Spanish communication.</p></div>
-    </div>
+
+<section id="experience" aria-labelledby="h-exp">
+  <h2 id="h-exp">Experience</h2>
+  <div class="jobs" style="margin-top:20px">
+    <div class="job"><time>May – Jul 2026</time><div><h3>Data Analytics Trainee, The Global Career Accelerator</h3><p>Built Tableau dashboards and KPI views, validated multi-source data, and presented recommendations.</p></div></div>
+    <div class="job"><time>Sep – Nov 2025</time><div><h3>QA and Research Analyst Intern, AC Creative Collective</h3><p>Audited business data on seven platforms and found 25 issues.</p></div></div>
+    <div class="job"><time>Sep 2024 – Sep 2025</time><div><h3>Undergraduate Research Assistant, Indiana University Astronomy</h3><p>Quality-checked SDSS spectra and documented error sources for faculty review.</p></div></div>
   </div>
+  <h3 style="margin:32px 0 12px;font-size:20px">Education and certifications</h3>
+  <ul class="certs">
+    <li>B.S. Astronomy/Astrophysics, Math minor, Indiana University <span>May 2026</span></li>
+    <li>Microsoft Power BI Data Analyst Associate (PL-300) <span class="status">In progress</span></li>
+    <li>Data Analysis and Data Visualization, The Global Career Accelerator <span>2026</span></li>
+  </ul>
 </section>
-<section class="section alt" aria-labelledby="accessibility-heading">
-  <div class="wrapper">
-    <p class="eyebrow">Site accessibility</p>
-    <h2 id="accessibility-heading">The portfolio is designed to be straightforward to navigate</h2>
-    <p class="section-intro">The site uses semantic landmarks, a skip link, visible keyboard focus, descriptive links, high-contrast text, meaningful image alternatives, responsive reflow, and no JavaScript requirement. This is not a formal accessibility certification; current limitations are documented in <a href="ACCESSIBILITY.md">the accessibility notes</a>.</p>
-  </div>
+
+<section id="contact" class="contact" aria-labelledby="h-contact">
+  <h2 id="h-contact">Contact</h2>
+  <p style="margin-top:12px">I am looking for entry-level data analyst roles. Email is the fastest way to reach me.</p>
+  <p class="mail" id="mail">naomiharkins575@gmail.com</p>
+  <div class="cta" style="margin-top:0"><button class="btn primary" id="copy" type="button">Copy email</button><a class="btn" href="https://linkedin.com/in/naomiharkins">LinkedIn</a></div>
 </section>
 </main>
-<footer class="site-footer"><div class="wrapper">Naomi Harkins · <a href="mailto:naomiharkins575@gmail.com">naomiharkins575@gmail.com</a> · Updated July 2026</div></footer>
-</body>
-</html>
+<footer>Naomi Harkins · Updated October 2026</footer>
+</div>
+<script>
+document.getElementById('copy').addEventListener('click',function(){
+  var b=this,t=document.getElementById('mail').textContent;
+  function done(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy email'},1800)}
+  function sel(){var r=document.createRange();r.selectNodeContents(document.getElementById('mail'));var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Press Ctrl+C'}
+  try{navigator.clipboard.writeText(t).then(done,sel)}catch(e){sel()}
+});
+</script>

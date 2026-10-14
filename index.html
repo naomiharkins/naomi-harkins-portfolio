@@ -1,5 +1,10 @@
-<title>Naomi Harkins Data Portfolio</title>
-<meta name="claude:viewport-fit-sides" content="cover">
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Naomi Harkins is an entry-level data analyst skilled in SQL, Excel, Tableau and Python.">
+<title>Naomi Harkins | Data Analyst Portfolio</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@400;500&display=swap">
 <style>
 /* Layout: one narrow reading column, project case studies as problem / method / result rows, spectrum-line motif as the only ornament */
@@ -17,7 +22,10 @@
   --bg:#0c1522; --surface:#142235; --fg:#e7edf6; --muted:#a2b0c6; --line:#27384f;
   --accent:#5cc4de; --accent-ink:#06202a; --mark:#12303c; color-scheme:dark}
 *{box-sizing:border-box}
-body{background:var(--bg);color:var(--fg);font:400 17px/1.6 var(--f-body);
+html{color-scheme:light dark}
+img,svg{max-width:100%}
+[hidden]{display:none!important}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 17px/1.6 var(--f-body);
   padding-inline:max(16px,env(safe-area-inset-left,0px)) max(16px,env(safe-area-inset-right,0px));padding-block:0 64px}
 a{color:var(--accent)}
 a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
@@ -73,7 +81,8 @@ section>p.sub{color:var(--muted);margin:0 0 28px;max-width:60ch}
 footer{font-size:14px;color:var(--muted);padding-top:24px;border-top:1px solid var(--line)}
 @media(max-width:560px){.case dl,.job{grid-template-columns:1fr}.case dl{gap:2px}.case dd{margin-bottom:10px}}
 </style>
-
+</head>
+<body>
 <div class="wrap">
 <nav aria-label="Main">
   <b>Naomi Harkins</b>
@@ -191,3 +200,5 @@ document.getElementById('copy').addEventListener('click',function(){
   try{navigator.clipboard.writeText(t).then(done,sel)}catch(e){sel()}
 });
 </script>
+</body>
+</html>
